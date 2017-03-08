@@ -45,7 +45,7 @@ void Bank::Deposit(int accountNumber, int amount)
 {
 	for (Account account : _accounts)
 	{
-		if (account.getAccountNumber() = accountNumber)
+		if (account.getAccountNumber() == accountNumber)
 		{
 			account.Deposit(amount);
 			return;
@@ -58,7 +58,7 @@ void Bank::Withdraw(int accountNumber, int amount)
 {
 	for (Account account : _accounts)
 	{
-		if (account.getAccountNumber() = accountNumber)
+		if (account.getAccountNumber() == accountNumber)
 		{
 			account.Withdraw(amount);
 			return;
