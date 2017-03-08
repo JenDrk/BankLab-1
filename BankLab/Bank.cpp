@@ -43,7 +43,7 @@ std::string Bank::ListAccounts()
 
 void Bank::Deposit(int accountNumber, int amount)
 {
-	for (Account account : _accounts)
+	for (Account &account : _accounts)
 	{
 		if (account.getAccountNumber() == accountNumber)
 		{
@@ -56,7 +56,7 @@ void Bank::Deposit(int accountNumber, int amount)
 
 void Bank::Withdraw(int accountNumber, int amount)
 {
-	for (Account account : _accounts)
+	for (Account &account : _accounts)
 	{
 		if (account.getAccountNumber() == accountNumber)
 		{
