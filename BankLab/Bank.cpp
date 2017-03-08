@@ -1,4 +1,5 @@
 #include "Bank.h"
+#include "Customer.h"
 
 Bank::Bank(std::string name) : _name(name)
 {
@@ -24,7 +25,9 @@ std::string Bank::ShowAccounts()
 	std::string output = "Accounts for " + _name + "\n";
 	for (Account account : _accounts)
 	{
-		output += std::to_string(account.getAccountNumber()) += "\n";
+		//Display as Account Number - lastname, firstname: Balance
+		//444 - Jones, Bob: balance
+		output += std::to_string(account.getAccountNumber()) += customer.getFullName() + ": " += std::to_string(account.getBalance()) += "\n";
 	}
 	return output;
 }
