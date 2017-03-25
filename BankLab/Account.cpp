@@ -30,3 +30,8 @@ int Account::getAccountNumber()
 {
 	return _accountNumber;
 }
+
+std::string Account::getAccountName()
+{
+	return _accountOwner.getFullName();
+}

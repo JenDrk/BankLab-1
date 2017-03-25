@@ -3,7 +3,6 @@
 
 Bank::Bank(std::string name) : _name(name)
 {
-	//comment
 }
 
 Bank::~Bank()
@@ -27,7 +26,7 @@ std::string Bank::ShowAccounts()
 	{
 		//Display as Account Number - lastname, firstname: Balance
 		//444 - Jones, Bob: balance
-		output += std::to_string(account.getAccountNumber()) += customer.getFullName() + ": " += std::to_string(account.getBalance()) += "\n";
+		output += std::to_string(account.getAccountNumber()) + " - " += account.getAccountName() + ": Balance: " += std::to_string(account.getBalance()) += "\n";
 	}
 	return output;
 }
